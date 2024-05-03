@@ -9,10 +9,10 @@ def Principal():
   return "Esta app te enseña artistas con algunos datos sobre: Nombre, Cantidad de Discos, Canciones en Total y disqueras"
 
 @app.router("Por_Nombre del Artista/<Nombre del Artista>")
-def PorNombredelArtista(Nombre del Artista):
+def PorNombredelArtista(NombredelArtista):
   Numero=int(Numero)
-  fila=base[base["Nombre del Artista"]==Nombre del Artista]
-  respuesta=f"El Nombre es  {Nombre del  Artista} es {fila.loc[:,"Nombre del Artista"]}"
+  fila=base[base["Nombre del Artista"]==NombredelArtista]
+  respuesta=f"El Nombre es  {NombredelArtista} es {fila.loc[:,"NombredelArtista"]}"
   return respuesta
 
 @app.router("/Por_Disqueras/<Disqueras>")
